@@ -2,7 +2,7 @@ from typing import Callable, Generator
 from re import findall
 
 def generator_numbers(text: str) -> Generator[float]:
-    pattern = r'\s\d+\.\d+\s'
+    pattern = r' \d+\.\d+ '
     found_patterns = findall(pattern, text)
     for num in found_patterns:
         yield float(num)
